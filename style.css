@@ -1,0 +1,130 @@
+@font-face
+{
+    font-family: monsieur;
+    src: url("Fonts/MonsieurLaDoulaise-Regular.ttf");
+}
+
+@font-face
+{
+    font-family: jpComicSans;
+    src: url("Fonts/HGSSoeiKakupoptai-03.ttf");
+}
+
+@font-face
+{
+    font-family: architex;
+    src: url("Fonts/Architex.ttf");
+}
+
+h1
+{
+    text-align: center;
+    font-family: architex;
+    font-size: 150%;
+}
+
+body
+{
+    background-image: url("Images/lined_paper_texture.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+#puzzle
+{
+    overflow: auto;
+}
+
+span.cell
+{
+    border-style: solid;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    border-width: 5px;
+    text-align: center;
+    font-family: jpComicSans;
+}
+
+#instructions
+{
+    height: 75px;
+    width: 200px;
+    border-width: 0px;
+    font-size: 300%;
+    font-family: architex;
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color:crimson;
+}
+
+#instructX
+{
+    width: 30px;
+    height: 30px;
+    left:0;
+    top:0;
+    position: relative;
+}
+
+#instrucBox
+{
+    font-family: architex;
+    font-size: 195%;
+    z-index: 99999;
+}
+
+.hint
+{
+    position: relative;
+    right: 0;
+    border-width: 0px;
+    font-size: 250%;
+    font-family: architex;
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color:black;
+}
+#hint1
+{
+    top: 60px;
+}
+
+#hint2
+{
+    top: 120px;
+}
+
+#hint3
+{
+    top: 180px;
+}
+
+#superHint
+{
+    top: 240px;
+}
+
+#solutionText
+{
+    color: red;
+    top: 320px;
+    font-size: 275%;
+}
+
+#doc
+{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    color: indianred;
+    font-size: 200%;
+    font-family: architex;
+}
