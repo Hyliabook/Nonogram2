@@ -82,7 +82,7 @@ let puzzles = [];
     ], 100)); */
 
 
-   /* puzzles.push(new Puzzle("Mushroom", 17, 17, 
+    puzzles.push(new Puzzle("Mushroom", 17, 17, 
     [["6","4<br>1","1<br>3<br>4","1<br>8<br>1","1<br>2<br>3<br>1","4<br>2<br>1","4<br>4<br>1","4<br>2<br>1","4<br>2<br>1","1<br>2<br>4 <br>1","1<br>8<br>1","1<br>2<br>2<br>1","1<br>1<br>2<br>1","1<br>1<br>4","4<br>3","6"],
      ["6","6 2","1 1","1 6 1","1 2 2 1","4 4","4 2 2","1 2 1 1","1 2 1 1","1 9 2","1 14","3 1 1 3","1 1 1 1","1 1","1 1","8"]
     ],
@@ -104,7 +104,7 @@ let puzzles = [];
         [false, false, false, true, false, false, false, false, false, false, false, false, true, false, false, false],
         [false, false, false, false, true, true, true, true, true, true, true, true, false, false, false, false]
     ], 65
-    )); */
+    ));
 
     /*
     puzzles.push(new Puzzle("Triforce", 13,13,
@@ -132,7 +132,7 @@ let puzzles = [];
         
     )); */
 
-    puzzles.push(new Puzzle(  //:)
+   /* puzzles.push(new Puzzle(  //:)
         "Loss", 14,14,
         [
             ['1', '1<br>4','4<br>1','1<br>4','1','1','13','1','4<br>1<br>4','1','1<br>1','4<br>1<br>1','1<br>1'],
@@ -154,7 +154,7 @@ let puzzles = [];
            [false, false, false, false, false, false, true, false, false, false, false, false, false],
         ], 60
 
-    ));
+    ));*/
 
     let currentPuzzle = Math.floor(Math.random() * puzzles.length);
 
