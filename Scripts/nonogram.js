@@ -59,8 +59,8 @@ class Puzzle{                                                       //A class th
 
 
 
-let cellWidth = 55;
-let cellHeight = 55;
+let cellWidth = 65;
+let cellHeight = 65;
 
 let span = document.createElement("span");
 span.className = "cell";
