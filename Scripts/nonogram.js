@@ -81,7 +81,34 @@ let puzzles = [];
         [false, false, true, false, false]
     ], 100)); */
 
+    puzzles.push(new Puzzle("sans", 18,18, 
+    [["4<br>3", "2<br>2<br>1", "1<br>1","1<br>3<br>2<br>1","1<br>3<br>2<br>1","1<br>3<br>1<br>1<br>1","1<br>3<br>1","1<br>1<br>1<br>1<br>1","1<br>2<br>3<br>1","1<br>1<br>1<br>1<br>1","1<br>3<br>1","1<br>3<br>1<br>1<br>1","1<br>3<br>2<br>1","1<br>3<br>2<br>1","1<br>1","2<br>2<br>1","4<br>3"],
+    ["9","2 2","1 1","1 1","1 1","1 3 3 1","1 3 3 1","1 3 1 3 1","1 3 1","2 1 1 2","1 11 1","1 1 1 1 1 1 1","2 7 2","2 2","7","0","0"]],
+    [
+        [false,false,false,false,true,true,true,true,true,true,true,true,true,false,false,false,false],
+[false,false,true,true,false,false,false,false,false,false,false,false,false,true,true,false,false],
+[false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false],
+[false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false],
+[true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true],
+[true,false,false,true,true,true,false,false,false,false,false,true,true,true,false,false,true],
+[true,false,false,true,true,true,false,false,false,false,false,true,true,true,false,false,true],
+[true,false,false,true,true,true,false,false,true,false,false,true,true,true,false,false,true],
+[false,true,false,false,false,false,false,true,true,true,false,false,false,false,false,true,false],
+[true,true,false,true,false,false,false,false,false,false,false,false,false,true,false,true,true],
+[true,false,false,true,true,true,true,true,true,true,true,true,true,true,false,false,true],
+[true,false,false,false,true,false,true,false,true,false,true,false,true,false,false,false,true],
+[false,true,true,false,false,true,true,true,true,true,true,true,false,false,true,true,false],
+[false,false,false,true,true,false,false,false,false,false,false,false,true,true,false,false,false],
+[false,false,false,false,false,true,true,true,true,true,true,true,false,false,false,false,false],
+[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
+[false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
 
+    ], 40
+    ));
+
+  
+
+    /*
     puzzles.push(new Puzzle("Mushroom", 17, 17, 
     [["6","4<br>1","1<br>3<br>4","1<br>8<br>1","1<br>2<br>3<br>1","4<br>2<br>1","4<br>4<br>1","4<br>2<br>1","4<br>2<br>1","1<br>2<br>4 <br>1","1<br>8<br>1","1<br>2<br>2<br>1","1<br>1<br>2<br>1","1<br>1<br>4","4<br>3","6"],
      ["6","6 2","1 1","1 6 1","1 2 2 1","4 4","4 2 2","1 2 1 1","1 2 1 1","1 9 2","1 14","3 1 1 3","1 1 1 1","1 1","1 1","8"]
@@ -104,7 +131,7 @@ let puzzles = [];
         [false, false, false, true, false, false, false, false, false, false, false, false, true, false, false, false],
         [false, false, false, false, true, true, true, true, true, true, true, true, false, false, false, false]
     ], 50
-    ));
+    ));*/
 
     /*
     puzzles.push(new Puzzle("Triforce", 13,13,
@@ -282,7 +309,7 @@ function solutionCheck()
     if(pass)  //But if you do...
     {
         if(!solutionDone){   //Makes sure it only happens once
-        let jingle = new Audio("Music/LaytonPuzzleSolved.mp3");
+        let jingle = new Audio("Music/nico.mp3");
         jingle.play();
         let confetti = document.createElement("img");
         confetti.src = "Images/Chris Cubellis Sticker-source.gif";
@@ -414,9 +441,16 @@ function hintFill()
    while(!hit)    //Essentailly, get a random filled tile from the solution, and check if it's already been filled in on the puzzle.
    {              //If so, just go throw the loop again until you do.  Once you find one that's in the solution but not filled in, fill it in and move on.
         let solution = puzzles[currentPuzzle].solution;
+
+        console.log(solution[0].length);
+        console.log(solution[1].length);
+
         let randoFillX = Math.floor(Math.random() * solution.length);
         let randoFillY = Math.floor(Math.random() * solution[0].length);
         let randoFill = solution[randoFillX][randoFillY];
+
+        console.log(randoFill);
+
         if(randoFill)
         {
             let randoCell = cells[randoFillY+1][randoFillX+1];
